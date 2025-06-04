@@ -1,67 +1,75 @@
 [
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-        "name": "HTML",
-        "icon": "https://img.icons8.com/color/48/html-5--v1.png"
-    },
-    
-    {
-        "name": "CSS",
-        "icon": " https://img.icons8.com/fluency/48/css3.png"
-    },
-    {
-        "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "ReactJS",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
-    },
-    {
-        "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
-    },
-    {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-    {
-        "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
-    },
-    {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/officel/40/express-js.png"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Mongodb-icon.svg"
-    },
-    {
-        "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    },
-    {
-        "name": "Git",
-        "icon": "https://img.icons8.com/color/48/git.png"
-    },
-    {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/amazon-web-services.png"
-    },
-    {
-        "name": "Docker",
-        "icon": "https://img.icons8.com/color/48/docker.png"
-    } 
+  {
+    "name": "Python",
+    "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+  },
+  {
+    "name": "C++",
+    "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
+  },
+  {
+    "name": "HTML",
+    "icon": "https://img.icons8.com/color/48/html-5--v1.png"
+  },
+
+  {
+    "name": "CSS",
+    "icon": " https://img.icons8.com/fluency/48/css3.png"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+  },
+  {
+    "name": "ReactJS",
+    "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "https://img.icons8.com/color/48/000000/typescript.png"
+  },
+  {
+    "name": "Next.js",
+    "icon": "https://img.icons8.com/fluency/48/nextjs.png"
+  },
+  {
+    "name": "TailwindCSS",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
+  },
+  {
+    "name": "NodeJS",
+    "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
+  },
+  {
+    "name": "ExpressJS",
+    "icon": "https://img.icons8.com/officel/40/express-js.png"
+  },
+  {
+    "name": "MySQL",
+    "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Mongodb-icon.svg"
+  },
+  {
+    "name": "GitHub",
+    "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+  },
+  {
+    "name": "Git",
+    "icon": "https://img.icons8.com/color/48/git.png"
+  },
+  {
+    "name": "AWS",
+    "icon": "https://img.icons8.com/color/48/amazon-web-services.png"
+  },
+  {
+    "name": "Docker",
+    "icon": "https://img.icons8.com/color/48/docker.png"
+  }
 ]

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 
 :root {
   --background: rgb(255 250 245);
@@ -16,6 +17,7 @@
   --font-sans: Montserrat, sans-serif;
   --font-serif: Merriweather, serif;
   --radius: 0.625rem;
+  --primary-font: 'Playfair Display', serif;
 }
 
 .dark {
@@ -1346,3 +1348,45 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+/* services section starts */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 1rem;
+}
+
+.service-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.service-box i {
+  font-size: 4rem;
+  color: #4070f4;
+  margin-bottom: 1.5rem;
+}
+
+.service-box h3 {
+  color: #444;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-box p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* services section ends */

@@ -1,171 +1,676 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Ankit Kanojiya, portfolio, Ankit,Front-end Dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Ankit's Portfolio.Front-end Developer and Graphic Designer" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
-    <title>Portfolio | Ankit kanojiya</title>
-    <style>
-.project-icon {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="Ankit Kanojiya, portfolio, Ankit,Front-end Dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+  <meta name="description" content="Welcome to Ankit's Portfolio.Front-end Developer and Graphic Designer" />
+  <!-- Google Fonts - Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+  <title>Portfolio | Ankit kanojiya</title>
+  <style>
+    /* Global font family */
+    * {
+      font-family: 'Playfair Display', serif;
+    }
 
-.project-icon i {
-  font-size: 4em;
-  transition: all 0.3s ease;
-}
+    /* Specific styles for headings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .heading {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
 
-/* Project-specific styling */
-.project-icon.striform {
-  background: linear-gradient(135deg, #6366f1, #a855f7);
-}
-.project-icon.cinematic {
-  background: linear-gradient(135deg, #f43f5e, #ec4899);
-}
-.project-icon.ignite {
-  background: linear-gradient(135deg, #f97316, #fb923c);
-}
-.project-icon.fruitables {
-  background: linear-gradient(135deg, #22c55e, #10b981);
-}
-.project-icon.ruaai {
-  background: linear-gradient(135deg, #3b82f6, #60a5fa);
-}
-.project-icon.starbucks {
-  background: linear-gradient(135deg, #047857, #059669);
-}
-.project-icon.cdp {
-  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
-}
-.project-icon.sheets {
-  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
-}
+    /* Navigation and buttons */
+    .navbar a,
+    .btn,
+    .fixed-nav-btn {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
 
-.project-icon i {
-  color: white;
-}
+    /* Content text */
+    p,
+    .desc p,
+    .content p {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
 
-.project-icon:hover {
-  transform: translateY(-5px);
-}
-.project-icon:hover i {
-  transform: scale(1.1);
-}
-</style>
+    .project-icon {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .project-icon i {
+      font-size: 4em;
+      transition: all 0.3s ease;
+    }
+
+    /* Project-specific styling */
+    .project-icon.striform {
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+    }
+
+    .project-icon.cinematic {
+      background: linear-gradient(135deg, #f43f5e, #ec4899);
+    }
+
+    .project-icon.ignite {
+      background: linear-gradient(135deg, #f97316, #fb923c);
+    }
+
+    .project-icon.fruitables {
+      background: linear-gradient(135deg, #22c55e, #10b981);
+    }
+
+    .project-icon.ruaai {
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    }
+
+    .project-icon.starbucks {
+      background: linear-gradient(135deg, #047857, #059669);
+    }
+
+    .project-icon.cdp {
+      background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    }
+
+    .project-icon.sheets {
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    }
+
+    .project-icon i {
+      color: white;
+    }
+
+    .project-icon:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-icon:hover i {
+      transform: scale(1.1);
+    }
+
+    /* work section styles */
+    .work .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .work .box {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      width: 350px;
+      height: 450px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .work .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .work .project-img {
+      width: 100%;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .work .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.5s ease;
+    }
+
+    .work .box:hover .project-img img {
+      transform: scale(1.1);
+    }
+
+    .work .content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .work .tag h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .work .desc {
+      padding: 0 10px;
+      flex-grow: 1;
+    }
+
+    .work .desc p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .work .btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 0;
+      margin-top: auto;
+    }
+
+    .work .btn {
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .work .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .work .btn i {
+      font-size: 1rem;
+    }
+
+    /* services section styles */
+    .services .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Fixed Navigation Box Styles */
+    .fixed-nav-box {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 15px 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+      display: flex;
+      gap: 20px;
+    }
+
+    .fixed-nav-btn {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 20px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      ;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      font-weight: bolder;
+    }
+
+    .fixed-nav-btn:hover {
+      transform: translateY(-2px);
+      background: orange;
+      box-shadow: 0 5px 15px rgba(64, 112, 244, 0.4);
+    }
+
+    @media (max-width: 768px) {
+
+      /* Header/Navigation */
+      header {
+        padding: 1rem 2rem;
+      }
+
+      #menu {
+        display: block;
+      }
+
+      header .navbar {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 2rem;
+        transition: 0.3s;
+        z-index: 100;
+      }
+
+      header .navbar.active {
+        top: 6.5rem;
+      }
+
+      header .navbar ul {
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      header .navbar ul li {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Home section */
+      .home {
+        padding: 2rem;
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .home .image img {
+        width: 70vw;
+        max-width: 280px;
+        height: auto;
+        margin: 2rem auto;
+      }
+
+      .home .content h2 {
+        font-size: 2.5rem;
+      }
+
+      .home .content p {
+        font-size: 1.2rem;
+      }
+
+      /* Projects section */
+      .work .box-container {
+        padding: 1rem;
+      }
+
+      .work .box {
+        width: 100%;
+        margin: 1rem 0;
+      }
+
+      /* Services section */
+      .services .services-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+
+      .service-box {
+        margin: 1rem 0;
+      }
+
+      /* Contact section */
+      .contact .container {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .contact .container .content {
+        width: 100%;
+      }
+
+      .contact .content .image-box {
+        display: none;
+        /* Hide decorative image on mobile */
+      }
+
+      .contact form {
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      /* Footer section */
+      .footer .box-container {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+      }
+
+      .footer .box {
+        text-align: center;
+        margin: 1.5rem 0;
+      }
+
+      /* Fixed navigation box */
+      .fixed-nav-box {
+        padding: 10px;
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .fixed-nav-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+
+      /* Timeline in Experience section */
+      .experience .timeline {
+        margin: 1rem;
+      }
+
+      .experience .container {
+        width: 100%;
+      }
+
+      .experience .container::after {
+        left: -8px;
+      }
+
+      s .experience .container.right {
+        left: 0;
+      }
+
+      .experience .container.left::after,
+      .experience .container.right::after {
+        left: -8px;
+      }
+
+      .experience .container.left .content,
+      .experience .container.right .content {
+        margin-left: 20px;
+      }
+
+      /* Skills section */
+      .skills .container {
+        padding: 1rem;
+      }
+
+      .skills .container .row {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+      }
+
+      /* Form improvements */
+      .form-group {
+        gap: 1rem;
+      }
+
+      .field {
+        width: 100%;
+        margin: 0.5rem 0;
+      }
+
+      /* Typography adjustments */
+      .heading {
+        font-size: 2.5rem;
+        margin: 2rem 1rem;
+      }
+
+      /* Improve touch targets */
+      button,
+      .btn,
+      .navbar a,
+      .social-icons a {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    /* Small phone optimization */
+    @media (max-width: 480px) {
+      .home .content h2 {
+        font-size: 2rem;
+      }
+
+      .home .content p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 0.8rem 2rem;
+      }
+
+      .heading {
+        font-size: 2rem;
+      }
+    }
+
+    /* Colorful loader styles */
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .colorful-loader {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid transparent;
+      animation: colorful-spin 2s linear infinite, colors 4s linear infinite;
+    }
+
+    @keyframes colorful-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes colors {
+      0% {
+        border-color: #f43f5e;
+        box-shadow: 0 0 20px #f43f5e;
+      }
+
+      25% {
+        border-color: #3b82f6;
+        box-shadow: 0 0 20px #3b82f6;
+      }
+
+      50% {
+        border-color: #22c55e;
+        box-shadow: 0 0 20px #22c55e;
+      }
+
+      75% {
+        border-color: #f97316;
+        box-shadow: 0 0 20px #f97316;
+      }
+
+      100% {
+        border-color: #f43f5e;
+        box-shadow: 0 0 20px #f43f5e;
+      }
+    }
+
+    /* Mouse trail effect */
+    .mouse-particle {
+      pointer-events: none;
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      z-index: 9999;
+    }
+
+    /* Initial load animation */
+    .content.animate-in {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
+
 <body oncontextmenu="return false">
+  <!-- pre loader -->
+  <div class="loader-container">
+    <div class="colorful-loader"></div>
+  </div>
 
-<!-- pre loader -->
-<!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
+  <!-- navbar starts -->
+  <header>
+    <a href="/" class="logo"><i class="fab fa-node-js"></i> Ankit</a>
 
-<!-- navbar starts -->
-<header>
-        <a href="/" class="logo"><i class="fab fa-node-js"></i> Ankit</a>
-
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <!-- <li><a href="#education">Education</a></li> -->
-            <li><a href="#work">Work</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <!-- <li><a href="#education">Education</a></li> -->
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- navbar ends -->
 
 
-<!-- hero section starts -->
-<section class="home" id="home">
+  <!-- hero section starts -->
+  <section class="home" id="home">
     <div id="particles-js"></div>
 
     <div class="content">
-    <h2>Hi There,<br/> I'm Ankit kanojiya <span></span></h2>
-    <p>i am a <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
+      <h2>Hi There,<br /> I'm Ankit kanojiya <span></span></h2>
+      <p>i am a <span class="typing-text"></span></p>
+      <a href="#about" class="btn"><span>About Me</span>
+        <i class="fas fa-arrow-circle-down"></i>
+      </a>
+      <div class="socials">
         <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ankit-kanojiya-242a15225/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="github" aria-label="GitHub" href="https://github.com/ankitkanojiya07" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/ankitkanojiya07?t=iZfY0QlG9PBzuDz4E12rSg&s=09" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li><a class="telegram" aria-label="Telegram" href="https://t.me/+919315297507" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/invites/contact/?i=1fp6d8daplnko&utm_content=my1zj9w"><i class="fab fa-instagram" target="_blank"></i></a></li>
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ankit-kanojiya-242a15225/"
+              target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a class="github" aria-label="GitHub" href="https://github.com/ankitkanojiya07" target="_blank"><i
+                class="fab fa-github"></i></a></li>
+          <li><a class="twitter" aria-label="Twitter"
+              href="https://twitter.com/ankitkanojiya07?t=iZfY0QlG9PBzuDz4E12rSg&s=09" target="_blank"><i
+                class="fab fa-twitter"></i></a></li>
+          <li><a class="telegram" aria-label="Telegram" href="https://t.me/+919315297507" target="_blank"><i
+                class="fab fa-telegram-plane"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram"
+              href="https://www.instagram.com/invites/contact/?i=1fp6d8daplnko&utm_content=my1zj9w"><i
+                class="fab fa-instagram" target="_blank"></i></a></li>
         </ul>
       </div>
     </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/ankit12.jpeg" alt="">
-</div>
-</section>
-<!-- hero section ends -->
+    <div class="image">
+      <img draggable="false" class="tilt" src="./assets/images/ankit12.jpeg" alt="">
+    </div>
+  </section>
+  <!-- hero section ends -->
 
 
-<!-- about section starts -->
-<section class="about" id="about">
+  <!-- about section starts -->
+  <section class="about" id="about">
     <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-    
+
     <div class="row">
 
-    <div class="content">
+      <div class="content">
         <h3>I'm Ankit kanojiya</h3>
         <!-- <span class="tag">Front-end Developer</span> -->
-        
-<p>As a Software Engineer, I enjoy turning ideas into functional, user-friendly applications. I specialize in building modern front-end systems that are not only efficient but also provide a great user experience. I take pride in solving complex problems with clean, maintainable solutions and enjoy bringing abstract concepts to life through thoughtful design and development.</p> <p>My skill set spans multiple programming languages and technologies, and I’m always eager to learn and adapt to the latest industry trends. Over the years, I’ve contributed to projects that were delivered on time and within scope, with a strong focus on quality and performance.</p> <p>I’m always open to new challenges and opportunities that push me to grow. If you're looking for a dedicated Software Engineer who can help bring your ideas to life with a practical and innovative approach, I’d love to connect!</p>
+
+        <p>As a Software Engineer, I enjoy turning ideas into functional, user-friendly applications. I specialize in
+          building modern front-end systems that are not only efficient but also provide a great user experience. I take
+          pride in solving complex problems with clean, maintainable solutions and enjoy bringing abstract concepts to
+          life through thoughtful design and development.</p>
+        <p>My skill set spans multiple programming languages and technologies, and I’m always eager to learn and adapt
+          to the latest industry trends. Over the years, I’ve contributed to projects that were delivered on time and
+          within scope, with a strong focus on quality and performance.</p>
+        <p>I’m always open to new challenges and opportunities that push me to grow. If you're looking for a dedicated
+          Software Engineer who can help bring your ideas to life with a practical and innovative approach, I’d love to
+          connect!</p>
 
         </p>
-        
+
         <!-- <div class="box-container"> -->
-            <!-- <div class="box">
+        <!-- <div class="box">
               <p><span> age: </span> 20</p>
               <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
             </div> -->
-            <!-- <div class="box">
+        <!-- <div class="box">
               <p><span> email : </span> akanojiya550@gmail.com</p>
               <p><span> place : </span> Delhi-110091</p>
             </div>
         </div> -->
-        
+
         <!-- <div class="resumebtn">
             <a href="https://drive.google.com/file/d/1cT6Up4P9TClxrACe43jjRnX6tM0kw3BU/view" target="_blank" class="btn"><span>Resume</span>
                 <i class="fas fa-chevron-right"></i>
             </a>
         </div> -->
 
+      </div>
     </div>
-    </div>
-</section>
-<!-- about section ends -->
+  </section>
+  <!-- about section ends -->
 
-<!-- skills section starts -->
-<section class="skills" id="skills">
+  <!-- skills section starts -->
+  <section class="skills" id="skills">
 
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
 
     <div class="container">
-          <div class="row" id="skillsContainer">
+      <div class="row" id="skillsContainer">
 
-            <!-- <div class="bar">
+        <!-- <div class="bar">
               <div class="info">
                 <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
                 <span>AdobeXD</span>
@@ -173,13 +678,13 @@
             </div> -->
 
       </div>
-</div>
-</section>
-<!-- skills section ends -->
+    </div>
+  </section>
+  <!-- skills section ends -->
 
 
-<!-- education section starts -->
-<!-- <section class="education" id="education">
+  <!-- education section starts -->
+  <!-- <section class="education" id="education">
 
   <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
 
@@ -211,202 +716,351 @@
 
 </div>
 </section> -->
-<!-- education section ends -->
+  <!-- education section ends -->
 
 
-<!-- work project section starts -->
-<section class="work" id="work">
-<h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+  <!-- work project section starts -->
+  <section class="work" id="work">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
 
-  <div class="box-container">
+    <style>
+      .work .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+        padding: 20px;
+      }
 
-    <div class="box tilt">
-      <div class="project-icon striform">
-        <i class="fas fa-wpforms"></i>
-      </div>
-      <div class="content">
-        <div class="tag">
-        <h3>StriForm</h3>
+      .work .box {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        width: 350px;
+        height: 450px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .work .box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .work .project-img {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .work .project-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transition: transform 0.5s ease;
+      }
+
+      .work .box:hover .project-img img {
+        transform: scale(1.1);
+      }
+
+      .work .content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .work .tag h3 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      .work .desc {
+        padding: 0 10px;
+        flex-grow: 1;
+      }
+
+      .work .desc p {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .work .btns {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px 0;
+        margin-top: auto;
+      }
+
+      .work .btn {
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .work .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .work .btn i {
+        font-size: 1rem;
+      }
+    </style>
+
+    <div class="box-container">
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/form.jpg" alt="StriForm Project">
         </div>
-        <div class="desc">
-          <p>striform is a form builder that provides UNLIMITED forms and responses for FREE. You can add logic, custom domains, upload files.</p>
-          <div class="btns">
-            <a href="https://striform.com/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/ankitkanojiya07/Striform" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+        <div class="content">
+          <div class="tag">
+            <h3>StriForm</h3>
+          </div>
+          <div class="desc">
+            <p>Welcome to Striform
+              The free alternative to Typeform with unlimited forms and responses.</p>
+            <div class="btns">
+              <a href="https://striform.com/" class="btn" target="_blank"><i class="fas fa-eye"></i></a>
+              <a href="https://github.com/ankitkanojiya07/Striform" class="btn" target="_blank"><i
+                  class="fas fa-code"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/i.jpg" alt="Cinematic Project">
+        </div>
+        <div class="content">
+          <div class="tag">
+            <h3>Cinematic</h3>
+          </div>
+          <div class="desc">
+            <p>CINAMATIC is a movie and TV show information along
+              with all the necessary details of each movie/TV show upon clicking on them.</p>
+            <div class="btns">
+              <a href="https://cinematiics.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> </a>
+              <a href="https://github.com/ankitkanojiya07/cinematic" class="btn" target="_blank"><i
+                  class="fas fa-code"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/sl.jpg" alt="Slider Project">
+        </div>
+        <div class="content">
+          <div class="tag">
+            <h3>Slider</h3>
+          </div>
+          <div class="desc">
+            <p>Starbuck Coffee slider with interactive product showcase and smooth animations.</p>
+            <div class="btns">
+              <a href="https://sliderby-ankit.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i>
+              </a>
+              <a href="https://github.com/ankitkanojiya07/Slider" class="btn" target="_blank"><i
+                  class="fas fa-code"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/l.jpg" alt="RupeeSecure Project">
+        </div>
+        <div class="content">
+          <div class="tag">
+            <h3>RupeeSecure</h3>
+          </div>
+          <div class="desc">
+            <p>A modern loan website with comprehensive financial services and calculator tools.</p>
+            <div class="btns">
+              <a href="https://fascinating-alpaca-b9dc2d.netlify.app/" class="btn" target="_blank"><i
+                  class="fas fa-eye"></i> </a>
+              <a href="https://fascinating-alpaca-b9dc2d.netlify.app/" class="btn" target="_blank"><i
+                  class="fas fa-code"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/lk.jpg" alt="IgniteAndRise Project">
+        </div>
+        <div class="content">
+          <div class="tag">
+            <h3>IgniteAndRise</h3>
+          </div>
+          <div class="desc">
+            <p>A career guidance platform dedicated to directing individuals to the right opportunities and HR
+              solutions.
+            </p>
+            <div class="btns">
+              <a href="https://igniteandris-aoqp.vercel.app/" class="btn" target="_blank"><i class="fas fa-eye"></i>
+              </a>
+              <a href="https://igniteandris-aoqp.vercel.app/" class="btn" target="_blank"><i class="fas fa-code"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/te.avif" alt="Fruitables Project">
+        </div>
+        <div class="content">
+          <div class="tag">
+            <h3>Fruitables</h3>
+          </div>
+          <div class="desc">
+            <p>An eCommerce website built for selling a variety of fresh fruits and vegetables with a modern interface.
+            </p>
+            <div class="btns">
+              <a href="https://fruitables-vegetables.netlify.app/" class="btn" target="_blank"><i
+                  class="fas fa-eye"></i> </a>
+              <a href="https://github.com/ankitkanojiya07/E-commerce-" class="btn" target="_blank"><i
+                  class="fas fa-code"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/a.png" alt="Rua Ai Project">
+        </div>
+        <div class="content">
+          <div class="tag">
+            <h3>Rua Ai</h3>
+          </div>
+          <div class="desc">
+            <p>An AI-powered content generation platform with advanced natural language processing capabilities.</p>
+            <div class="btns">
+              <a href="https://rua-ai.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> </a>
+              <a href="https://github.com/ankitkanojiya07/ruaai" class="btn" target="_blank"><i class="fas fa-code"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/195.jpg" alt="CDP Support Agent Project">
+        </div>
+        <div class="content">
+          <div class="tag">
+            <h3>CDP Support Agent</h3>
+          </div>
+          <div class="desc">
+            <p>An AI assistant specifically designed to answer questions about Customer Data Platforms (CDPs).</p>
+            <div class="btns">
+              <a href="https://building-a-support-agent-chatbot-for-cdp-ecru.vercel.app/" class="btn" target="_blank"><i
+                  class="fas fa-eye"></i> </a>
+              <a href="https://github.com/ankitkanojiya07/Building-a-Support-Agent-Chatbot-for-CDP" class="btn"
+                target="_blank"><i class="fas fa-code"></i> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <div class="project-img">
+          <img src="./assets/images/projects/u.jpg" alt="Google Sheet Clone Project">
+        </div>
+        <div class="content">
+          <div class="tag">
+            <h3>Google Sheet Clone</h3>
+          </div>
+          <div class="desc">
+            <p>A React-based clone of Google Sheets with core spreadsheet functionality and formatting options.</p>
+            <div class="btns">
+              <a href="https://web-application-mimicking-google-sheets-sigma.vercel.app/" class="btn" target="_blank"><i
+                  class="fas fa-eye"></i> </a>
+              <a href="https://github.com/ankitkanojiya07/Web-Application-Mimicking-Google-Sheets" class="btn"
+                target="_blank"><i class="fas fa-code"></i> </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+  <!-- work project section ends -->
 
-    <div class="box tilt">
-      <div class="project-icon cinematic">
-        <i class="fas fa-film"></i>
-      </div>
-      <div class="content">
-        <div class="tag">
-        <h3>cinematic</h3>
-        </div>
-        <div class="desc">
-          <p>This App provides trending and searched movies and TV shows, and all necessary details of each movie/TV show on clicking on that.</p>
-          <div class="btns">
-            <a href="https://cinematiics.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/ankitkanojiya07/cinematic" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- services section starts -->
+  <section class="services" id="services">
+    <h2 class="heading"><i class="fas fa-cogs"></i> Services <span>Provided</span></h2>
 
-     <div class="box tilt">
-      <div class="project-icon cinematic">
-        <i class="fas fa-film"></i>
+    <div class="services-container">
+      <div class="service-box tilt">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Management</h3>
+        <p>Expert cloud infrastructure management, optimization, and monitoring for seamless business operations.</p>
       </div>
-      <div class="content">
-        <div class="tag">
-        <h3>Slider</h3>
-        </div>
-        <div class="desc">
-          <p>Startbuck Coffee slider</p>
-          <div class="btns">
-            <a href="https://sliderby-ankit.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/ankitkanojiya07/Slider" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="box tilt">
-      <div class="project-icon cinematic">
-        <i class="fas fa-film"></i>
+      <div class="service-box tilt">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Cloud Application Development</h3>
+        <p>Building scalable, cloud-native applications with modern architecture and best practices.</p>
       </div>
-      <div class="content">
-        <div class="tag">
-        <h3>RupeeSecure</h3>
-        </div>
-        <div class="desc">
-          <p>A loan website</p>
-          <div class="btns">
-            <a href="https://fascinating-alpaca-b9dc2d.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://fascinating-alpaca-b9dc2d.netlify.app/" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="box tilt">
-      <div class="project-icon ignite">
-        <i class="fas fa-rocket"></i>
+      <div class="service-box tilt">
+        <i class="fas fa-code"></i>
+        <h3>Custom Software Development</h3>
+        <p>Tailored software solutions designed to meet your specific business requirements and goals.</p>
       </div>
-      <div class="content">
-        <div class="tag">
-        <h3>IgniteAndRise</h3>
-        </div>
-        <div class="desc">
-          <p>IgniteAndRise is dedicated to directing individuals to the right career opportunities and providing comprehensive HR solutions.</p>
-          <div class="btns">
-            <a href="https://igniteandris-aoqp.vercel.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://igniteandris-aoqp.vercel.app/" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="box tilt">
-      <div class="project-icon fruitables">
-        <i class="fas fa-store"></i>
-      </div>
-      <div class="content">
-        <div class="tag">
-        <h3>fruitables</h3>
-        </div>
-        <div class="desc">
-          <p>This project is an eCommerce website built for selling a variety of fresh fruits and vegetables.</p>
-          <div class="btns">
-            <a href="https://fruitables-vegetables.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/ankitkanojiya07/E-commerce-" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="box tilt">
-      <div class="project-icon ruaai">
-        <i class="fas fa-robot"></i>
-      </div>
-      <div class="content">
-        <div class="tag">
-        <h3>Rua Ai</h3>
-        </div>
-        <div class="desc">
-          <p>It is a Rua Ai which generate content</p>
-          <div class="btns">
-            <a href="https://rua-ai.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/ankitkanojiya07/ruaai" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="box tilt">
-      <div class="project-icon cdp">
+      <div class="service-box tilt">
         <i class="fas fa-database"></i>
+        <h3>Database Development</h3>
+        <p>Efficient database design, development, and optimization for optimal data management.</p>
       </div>
-      <div class="content">
-        <div class="tag">
-        <h3>CDP Support Agent</h3>
-        </div>
-        <div class="desc">
-          <p>I'm specifically designed to answer 'how-to' questions about Customer Data Platforms (CDPs).</p>
-          <div class="btns">
-            <a href="https://building-a-support-agent-chatbot-for-cdp-ecru.vercel.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/ankitkanojiya07/Building-a-Support-Agent-Chatbot-for-CDP" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-
-    <div class="box tilt">
-      <div class="project-icon sheets">
-        <i class="fas fa-table"></i>
+      <div class="service-box tilt">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Web Design</h3>
+        <p>Creative and responsive web designs that deliver exceptional user experiences.</p>
       </div>
-      <div class="content">
-        <div class="tag">
-        <h3>Goggle Sheet Clone</h3>
-        </div>
-        <div class="desc">
-          <p>Goggle sheet clone using React</p>
-          <div class="btns">
-            <a href="https://web-application-mimicking-google-sheets-sigma.vercel.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/ankitkanojiya07/Web-Application-Mimicking-Google-Sheets" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
+
+      <div class="service-box tilt">
+        <i class="fas fa-globe"></i>
+        <h3>Website Development</h3>
+        <p>Full-stack website development with modern technologies and frameworks.</p>
       </div>
     </div>
+  </section>
+  <!-- services section ends -->
 
+  <!-- experience section starts -->
+  <section class="experience" id="experience">
 
-</div>
+    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
 
+    <div class="timeline">
 
-
-<!-- <div class="viewall">
-  <a href="/projects" class="btn"><span>View All</span>
-    <i class="fas fa-arrow-right"></i>
-</a>
-</div> -->
-
-</section>
-<!-- work project section ends -->
-
-<!-- experience section starts -->
-<section class="experience" id="experience">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
-
-  <div class="timeline">
-
-    <!-- <div class="container right">
+      <!-- <div class="container right">
       <div class="content">
         <div class="tag">
           <h2>Lyriclious</h2>
@@ -418,7 +1072,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="container left">
+      <!-- <div class="container left">
       <div class="content">
         <div class="tag">
           <h2>Aashman Foundation</h2>
@@ -430,7 +1084,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="container right">
+      <!-- <div class="container right">
       <div class="content">
         <div class="tag">
           <h2>Aashman Foundation</h2>
@@ -442,7 +1096,7 @@
       </div>
     </div> -->
 
-    <div class="container left">
+      <!-- <div class="container left">
       <div class="content">
         <div class="tag">
           <h2>Oasis Infobyte</h2>
@@ -452,21 +1106,21 @@
             <p>May 2022 - June 2022</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Spark's Foundation</h2>
-        </div>
-        <div class="desc">
+      <div class="container right">
+        <div class="content">
+          <div class="tag">
+            <h2>Spark's Foundation</h2>
+          </div>
+          <div class="desc">
             <h3>Web Developer | Internship</h3>
             <p>Nov 2022 - Dec 2022</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- <div class="container left">
+      <!-- <div class="container left">
       <div class="content">
         <div class="tag">
           <h2>Winsple</h2>
@@ -478,7 +1132,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="container right">
+      <!-- <div class="container right">
       <div class="content">
         <div class="tag">
           <h2>SparkyEdu</h2>
@@ -491,205 +1145,273 @@
     </div>
   </div> -->
 
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Studyspot India</h2>
-        </div>
-        <div class="desc">
+      <div class="container left">
+        <div class="content">
+          <div class="tag">
+            <h2>Studyspot India</h2>
+          </div>
+          <div class="desc">
             <h3>Software Engineer </h3>
             <p>Sep 2023 - Aug 2024</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container right">
-    <div class="content">
-      <div class="tag">
-        <h2>Acutuse Ai</h2>
-      </div>
-      <div class="desc">
-        
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Acutuse Ai</h2>
+        </div>
+        <div class="desc">
+
           <h3>Software Engineer</h3>
           <p>Sep 2024</p>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    </div>
 
-  <!-- <div class="morebtn">
+    <!-- <div class="morebtn">
     <a href="/experience" class="btn"><span>View All</span>
       <i class="fas fa-arrow-right"></i>
   </a>
   </div> -->
 
-</div>
-
-</section>
-<!-- experience section ends -->
-
-<!-- contact section starts -->
-<section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
-      <form method="POST" id="contact-form">
-        
-        <!-- Hidden Access Key -->
-        <input type="hidden" name="access_key" value="66273cf4-a57a-48d4-8658-514a247cefc2">
-        
-        <div class="form-group">
-          <div class="field">
-            <input type="text" name="name" placeholder="Name" required>
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="field">
-            <input type="email" name="email" placeholder="Email" required>
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="field">
-            <input type="text" name="phone" placeholder="Phone">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div class="message">
-            <textarea name="message" placeholder="Message" required></textarea>
-            <i class="fas fa-comment-dots"></i>
-          </div>
-        </div>
-        <div class="button-area">
-          <button type="submit">
-            Submit <i class="fa fa-paper-plane"></i>
-          </button>
-        </div>
-        <div id="result"></div>
-      </form>
     </div>
-  </div>
-</section>
-<!-- contact section ends -->
 
-<script>
-const form = document.getElementById('contact-form');
-const result = document.getElementById('result');
+  </section>
+  <!-- experience section ends -->
 
-form.addEventListener('submit', function(e) {
-    const formData = new FormData(form);
-    e.preventDefault();
+  <!-- contact section starts -->
+  <section class="contact" id="contact">
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
 
-    result.innerHTML = "Please wait...";
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <img draggable="false" src="./assets/images/contact1.png" alt="">
+        </div>
+        <form method="POST" id="contact-form">
 
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
+          <!-- Hidden Access Key -->
+          <input type="hidden" name="access_key" value="66273cf4-a57a-48d4-8658-514a247cefc2">
+
+          <div class="form-group">
+            <div class="field">
+              <input type="text" name="name" placeholder="Name" required>
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="field">
+              <input type="email" name="email" placeholder="Email" required>
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="field">
+              <input type="text" name="phone" placeholder="Phone">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="message">
+              <textarea name="message" placeholder="Message" required></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+          </div>
+          <div class="button-area">
+            <button type="submit">
+              Submit <i class="fa fa-paper-plane"></i>
+            </button>
+          </div>
+          <div id="result"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- contact section ends -->
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function (e) {
+      const formData = new FormData(form);
+      e.preventDefault();
+
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      result.innerHTML = "Please wait...";
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
         .then(async (response) => {
-            let json = await response.json();
-            if (response.status === 200) {
-                result.innerHTML = json.message;
-            } else {
-                console.log(response);
-                result.innerHTML = json.message;
-            }
+          let json = await response.json();
+          if (response.status === 200) {
+            result.innerHTML = json.message;
+          } else {
+            console.log(response);
+            result.innerHTML = json.message;
+          }
         })
         .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
         })
         .then(() => {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 3000);
+          form.reset();
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 3000);
         });
-});
-</script>
+    });
+  </script>
 
+  <script>
+    // Loader functionality
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader-container');
+      const content = document.querySelector('.content');
 
+      // Hide loader after 2 seconds
+      setTimeout(() => {
+        loader.style.display = 'none';
+        content.classList.add('animate-in');
+      }, 2000);
+    });
 
+    // Mouse trail effect
+    document.addEventListener('mousemove', function (e) {
+      const colors = ['#f43f5e', '#3b82f6', '#22c55e', '#f97316', '#a855f7'];
+      const particle = document.createElement('div');
+      particle.className = 'mouse-particle';
 
-<!-- footer section starts -->
-<section class="footer">
+      // Random color from the array
+      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
 
-  <div class="box-container">
+      // Position the particle
+      particle.style.left = e.clientX + 'px';
+      particle.style.top = e.clientY + 'px';
+
+      document.body.appendChild(particle);
+
+      // Animate and remove the particle
+      setTimeout(() => {
+        particle.style.transition = 'all 0.5s ease-out';
+        particle.style.opacity = '0';
+        particle.style.transform = `translate(${(Math.random() - 0.5) * 20}px, ${(Math.random() - 0.5) * 20}px)`;
+        setTimeout(() => particle.remove(), 500);
+      }, 50);
+    });
+  </script>
+
+  <!-- footer section starts -->
+  <section class="footer">
+
+    <div class="box-container">
 
       <div class="box">
         <a href="/" class="logo"><i class="fab fa-node-js"></i> Ankit</a>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> </p>
+        <p>Thank you for visiting my personal portfolio website Connect with me over socials. <br /> <br /> </p>
       </div>
 
       <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <!-- <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a> -->
-          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+        <h3>quick links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+        <!-- <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a> -->
+        <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+        <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
       </div>
 
       <div class="box">
-          <h3>contact info</h3>
-          <p> <i class="fas fa-envelope"></i>akanojiya550@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Delhi, India</p>
-          <div class="share">
+        <h3>contact info</h3>
+        <p> <i class="fas fa-envelope"></i>akanojiya550@gmail.com</p>
+        <p> <i class="fas fa-map-marked-alt"></i>Delhi, India</p>
+        <div class="share">
 
-              <a href="https://www.linkedin.com/in/ankitkanojiya07/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
-              <a href="https://github.com/ankitkanojiya07" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-              <a href="https://twitter.com/ankitkanojiya07?t=iZfY0QlG9PBzuDz4E12rSg&s=09" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
-              <a href="https://t.me/+919315297507" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
-          </div>
+          <a href="https://www.linkedin.com/in/ankitkanojiya07/" class="fab fa-linkedin" aria-label="LinkedIn"
+            target="_blank"></a>
+          <a href="https://github.com/ankitkanojiya07" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+          <a href="https://twitter.com/ankitkanojiya07?t=iZfY0QlG9PBzuDz4E12rSg&s=09" class="fab fa-twitter"
+            aria-label="Twitter" target="_blank"></a>
+          <a href="https://t.me/+919315297507" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+        </div>
       </div>
+    </div>
+
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
+        href="https://www.linkedin.com/in/ankitkanojiya07/"> Ankit </a></h1>
+
+  </section>
+  <!-- footer section ends -->
+
+
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+  <!-- scroll back to top -->
+
+  <!-- Fixed Navigation Box -->
+  <div class="fixed-nav-box">
+    <a href="#services" class="fixed-nav-btn">Services</a>
+    <a href="#work" class="fixed-nav-btn">Projects</a>
   </div>
 
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/ankit-kanojiya-242a15225/"> Ankit </a></h1>
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-</section>
-<!-- footer section ends -->
+  <!-- typed.js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <!-- particle.js links -->
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
 
-<!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
+  <!-- vanilla tilt.js links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <!-- scroll reveal anim -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<!-- typed.js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
-<!-- particle.js links -->
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script>
+    // Mobile menu functionality
+    document.querySelector('#menu').onclick = () => {
+      document.querySelector('#menu').classList.toggle('fa-times');
+      document.querySelector('.navbar').classList.toggle('active');
+    };
 
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    // Close menu when clicking a link
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('#menu').classList.remove('fa-times');
+        document.querySelector('.navbar').classList.remove('active');
+      });
+    });
 
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src="./assets/js/script.js"></script>
+    // Close menu when scrolling
+    window.onscroll = () => {
+      document.querySelector('#menu').classList.remove('fa-times');
+      document.querySelector('.navbar').classList.remove('active');
+    };
+  </script>
 
 </body>
+
 </html>
